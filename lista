@@ -1,0 +1,48 @@
+
+def get_vogals(frase):
+    vogais=[]
+    if 'a' or 'A' in frase:
+        vogais.append('a')
+    if 'e' or 'E' in frase:
+        vogais.append('e')
+    if 'i' or 'I' in frase:
+        vogais.append('i')
+    if 'o' or 'O' in frase:
+        vogais.append('o')
+    if 'u' or 'U' in frase:
+        vogais.append('u')
+    print(vogais)
+    return vogais
+get_vogals("oi Amiga")
+
+def enconder(frase):
+    alfabeto=['a', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    nova_frase=list(frase)
+    for i in range(0, len(nova_frase)):
+        for j in range(0, len(alfabeto)):
+            if nova_frase[i]==alfabeto[j]:
+                nova_frase[i]=alfabeto[j-1]
+    for letra in nova_frase:
+        print(letra, end='')
+    return nova_frase
+
+def isAnagram(palavra1, palavra2):
+    palavra1=palavra1.lower()
+    palvra2=palavra2.lower()
+    if len(palavra1) != len(palavra2):
+        print('Não são anagramas')
+        return False
+    Palavra1=list(palavra1)
+    Palavra2=list(palavra2)
+    iguais=[]
+    for i in Palavra1:
+        if i in Palavra2:
+            Palavra2.remove(i)
+            iguais.append(i)
+    if len(iguais)==len(Palavra1):
+        print('São anagramas')
+        return True
+    else:
+        print('Não são anagramas')
+        return False
+isAnagram('romA', 'amor')
