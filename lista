@@ -1,3 +1,16 @@
+def isPalindrome(palavra):
+    palavra2=list(palavra)
+    iguais=[]
+    for i in range(0, len(palavra2)):
+        if palavra2[i].lower()==palavra2[len(palavra2)-i-1].lower():
+            iguais.append(palavra2[i])
+    if len(iguais)==len(palavra2):
+        print(palavra, 'é um palindromo')
+        return True
+    else:
+        print(palavra, 'não é um palindromo')
+        return False
+isPalindrome('Arara')
 
 def get_vogals(frase):
     vogais=[]
