@@ -1,3 +1,25 @@
+#Questão 1 item a)
+#a saída é:
+#1
+#2
+
+#Questão 1 item b)
+#a saída é:
+# Value is bad
+
+#Questão 1 item c)
+#a saída é:
+#que massa!
+
+#Questão 1 item d)
+#a saída é:
+#[1, 2, 5, 4]
+
+#Questão 2 
+#item a) Trocar ints por init
+#item b) [] e [2.0, 1.0]
+#item c) Na linha 20 um dos self.values[i] deve ser trocado por other_vector.values[i]
+
 #Questão 3 item a
 class Circle:
     def __init__(self, p, q, raio, x, y): #(p, q) e (x, y) são respectivamente o centro do círculo e as coordenadas do ponto a ser analisado
