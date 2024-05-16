@@ -16,29 +16,40 @@ class Circle:
             return "O ponto está fora da circunferência"
 circulo=Circle(0,0,1.0,2,2)
 dist=circulo.esta_dentro()
-print(dist)
+print(dist) #a saída esperada é "O ponto está fora da circunferência"
 
 
-class Circle:
-    def __init__(self, x, y, raio, p, q, m, n): #(x, y), (p, q), (m,n) são respectivamente o centro do círculo e as coordenadas das extremidades do segmento
-        self.x=x
-        self.y=y
+#Questão 3 item b
+
+class Linesegment:
+    def __init__(self, p, q, m, n, x, y): #(p, q) e (m,n) são os extremos do segmento e (x,y) é o ponto que será avaliado
         self.p=p
         self.q=q
         self.m=m
         self.n=n
-        self.raio=raio
-    def esta_dentroo(self):
-        distancia1=((self.x-self.p)**2+(self.y-self.q)**2)**0.5
-        distancia2=((self.x-self.m)**2+(self.y-self.n)**2)**0.5
-        if distancia == self.raio:
-            return "O ponto está sobre a circunferência"
-        elif distancia < self.raio:
-            return "O ponto está dentro da circunferência"
+        self.x=x
+        self.y=y
+    def nosegmento(self):
+        a=(self.n-self.q)/(self.m-self.p)
+        b=self.n-a*self.m #esses dois passos foram usados para construir a equação da reta que passa por (p, q) e (m, n)
+        if self.y==a*self.x+b: #aqui é checado se o ponto pertence a reta e está entre os 2 extremos
+            if self.p<self.x and self.x<self.m: 
+                if self.q<self.y and self.y<self.n:
+                    return "O ponto está no segmento"
+                elif self.n<self.y and self.y<self.q:
+                    return "O ponto está no segmento"
+                else:
+                    return "O ponto não está no segmento"
+            elif self.m<self.x and self.x<self.p:
+                if self.q<self.y and self.y<self.n:
+                    return "O ponto está no segmento"
+                elif self.n<self.y and self.y<self.q:
+                    return "O ponto está no segmento"
+                else:
+                    return "O ponto não está no segmento"
         else:
-            return "O ponto está fora da circunferência"
-circulo=Circle(0,0,1.0,2,2)
-dist=circulo.esta_dentro()
-print(dist)
-
+            return "O ponto não está no segmento"
+pontos= Linesegment(1, 1, 0, 0, 0.5, 0.5)
+esta_no_segmento=pontos.nosegmento()
+print(esta_no_segmento) #a saída esperada nesse caso é "O ponto está no segmento"
 
