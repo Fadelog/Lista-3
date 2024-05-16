@@ -7,7 +7,7 @@ class Circle:
         self.q=q
         self.raio=raio
     def esta_dentro(self):
-        distancia=((self.x-self.p)**2+(self.y-self.q)**2)**0.5
+        distancia=((self.x-self.p)**2+(self.y-self.q)**2)**0.5 #formula da distância entre 2 pontos
         if distancia == self.raio:
             return "O ponto está sobre a circunferência"
         elif distancia < self.raio:
@@ -16,7 +16,7 @@ class Circle:
             return "O ponto está fora da circunferência"
 circulo=Circle(0,0,1.0,2,2)
 dist=circulo.esta_dentro()
-print(dist) #a saída esperada é "O ponto está fora da circunferência"
+print(dist) #A saída esperada é "O ponto está fora da circunferência"
 
 
 #Questão 3 item b
