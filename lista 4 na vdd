@@ -53,3 +53,16 @@ pontos= Linesegment(1, 1, 0, 0, 0.5, 0.5)
 esta_no_segmento=pontos.nosegmento()
 print(esta_no_segmento) #a saída esperada nesse caso é "O ponto está no segmento"
 
+#Questão 4
+
+def segmento_no_circulo(x,y, p,q, m,n, raio):#(x, y) é o centro do circulo e (p, q) e (m,n) são os extremos do segmento
+    distancia1=((x-p)**2+(y-q)**2)**0.5
+    distancia2=((x-m)**2+(y-n)**2)**0.5
+    if distancia1<raio and distancia2<raio:
+      print("O segmento está totalmente contido no disco")
+      return True
+    else:
+      print ("O segmento não está totalmente contido no disco")
+      return False
+segmento_no_circulo(0,0, 1,0, 0,1, 1.0)#A saída esperada é "O segmento não está totalmente contido no disco"
+
