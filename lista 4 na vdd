@@ -1,6 +1,6 @@
 #Questão 3 item a
 class Circle:
-    def __init__(self, x, y, raio, p, q): #(x, y) e (p, q) são respectivamente o centro do círculo e as coordenadas do ponto a ser analisado
+    def __init__(self, p, q, raio, x, y): #(p, q) e (x, y) são respectivamente o centro do círculo e as coordenadas do ponto a ser analisado
         self.x=x
         self.y=y
         self.p=p
