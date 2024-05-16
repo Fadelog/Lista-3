@@ -88,3 +88,25 @@ def segmento_no_circulo(x,y, p,q, m,n, raio):#(x, y) é o centro do circulo e (p
       return False
 segmento_no_circulo(0,0, 1,0, 0,1, 1.0)#A saída esperada é "O segmento não está totalmente contido no disco"
 
+#Questão 5
+
+class Vector():
+  def __init__(self, entradas):
+    self.entradas = entradas
+    self.dim = len(self.entradas)
+  def dyadic_product(self, vetor2):
+    produto=[]
+    for i in range(self.dim):
+      for j in range(vetor2.dim):
+        conta= self.entradas[i]*vetor2.entradas[j]
+        produto.append(conta)
+    return produto
+
+
+
+u = Vector ([ 0.0 , 2.0 , 3.5 ])
+v = Vector ([ 1.0 , 0.5 ])
+print(u.dyadic_product(v))
+print(v.dyadic_product(u))
+
+
