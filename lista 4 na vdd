@@ -1,0 +1,44 @@
+#Questão 3 item a
+class Circle:
+    def __init__(self, x, y, raio, p, q): #(x, y) e (p, q) são respectivamente o centro do círculo e as coordenadas do ponto a ser analisado
+        self.x=x
+        self.y=y
+        self.p=p
+        self.q=q
+        self.raio=raio
+    def esta_dentro(self):
+        distancia=((self.x-self.p)**2+(self.y-self.q)**2)**0.5
+        if distancia == self.raio:
+            return "O ponto está sobre a circunferência"
+        elif distancia < self.raio:
+            return "O ponto está dentro da circunferência"
+        else:
+            return "O ponto está fora da circunferência"
+circulo=Circle(0,0,1.0,2,2)
+dist=circulo.esta_dentro()
+print(dist)
+
+
+class Circle:
+    def __init__(self, x, y, raio, p, q, m, n): #(x, y), (p, q), (m,n) são respectivamente o centro do círculo e as coordenadas das extremidades do segmento
+        self.x=x
+        self.y=y
+        self.p=p
+        self.q=q
+        self.m=m
+        self.n=n
+        self.raio=raio
+    def esta_dentroo(self):
+        distancia1=((self.x-self.p)**2+(self.y-self.q)**2)**0.5
+        distancia2=((self.x-self.m)**2+(self.y-self.n)**2)**0.5
+        if distancia == self.raio:
+            return "O ponto está sobre a circunferência"
+        elif distancia < self.raio:
+            return "O ponto está dentro da circunferência"
+        else:
+            return "O ponto está fora da circunferência"
+circulo=Circle(0,0,1.0,2,2)
+dist=circulo.esta_dentro()
+print(dist)
+
+
